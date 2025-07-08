@@ -39,7 +39,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("${API_BASE_URL}/api/login", {
+      const response = await fetch(`${API_BASE_URL}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ role, sucCode, password }),
@@ -102,7 +102,7 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await fetch("${API_BASE_URL}/api/login/change-password", {
+      const response = await fetch(`${API_BASE_URL}/api/login/change-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ role, sucCode, oldPassword, newPassword }),
