@@ -1,0 +1,61 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0 20px;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.logo-img {
+  width: 150px; /* Default width for desktop */
+  height: auto;
+}
+
+/* Adjust width for smaller screens */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 100px; /* Smaller width for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    width: 80px; /* Even smaller width for very small screens */
+  }
+}
+
+
+
+/* Login dropdown styles */
+.navbar-login {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0; /* Align dropdown to the left */
+  top: 100%;
+  z-index: 1100;
+  min-width: 150px; /* Ensures proper width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+  transform: translateX(-70px); /* Moves menu 10px more to the left */
+}
+
+.dropdown-item {
+  font-size: 14px;
+  padding: 10px 15px;
+  white-space: nowrap;
+}

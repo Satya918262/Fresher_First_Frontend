@@ -1,0 +1,93 @@
+.marquee-container {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center; /* Center aligns the heading */
+}
+
+.marquee-heading {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px; /* More spacing below heading */
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.company-logo {
+  width: 120px; /* Slightly increased width */
+  height: 100px;
+  object-fit: contain;
+  margin: 0 40px; /* Increased gap between logos */
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 50px;
+}
+
+/* Grid container that adapts based on screen size */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column by default for small screens */
+  gap: 20px; /* Space between grid items */
+}
+
+/* For medium screens, set 2 columns */
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+
+  .grid-item:nth-child(3) {
+    grid-column: span 2; /* Make the last item span across 2 columns */
+    justify-self: center; /* Center the last item horizontally */
+  }
+}
+
+/* For large screens (desktop), set 3 columns */
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  }
+
+  .grid-item:nth-child(3) {
+    grid-column: span 1; /* Make sure it stays in one column for large screens */
+    justify-self: auto; /* Reset the centering for larger screens */
+  }
+}
+
+/* Styling for individual grid items */
+.grid-item {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
